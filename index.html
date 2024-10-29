@@ -3,21 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Харлана - начинающий веб-разработчик</title>
-    <link rel="stylesheet" href="about.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="../favicon-48x48.png"
-      sizes="48x48"
-    />
+    <title>Харлана — начинающий веб-разработчик</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script src="contact.js" defer></script>
+    <link rel="icon" type="image/png" href="../favicon-48x48.png" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../apple-touch-icon.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
   </head>
   <body>
@@ -39,47 +31,48 @@
       </div>
     </header>
 
-    <!-- Основной блок страницы -->
-    <main class="about-container">
-      <section class="introduction">
-        <h1>Привет, меня зовут Харлана</h1>
+    <main>
+      <section class="contact-header">
+        <h1>Свяжитесь со мной</h1>
         <p>
-          Я нахожусь в декрете и начинаю путь веб-разработчика.
-          Программирование меня интересовало ранее, но не было времени на глубокое изучение. 
-          С этого года я начала изучать программирование, и надеюсь освоить данную тему и углубиться в нее. 
+          Я всегда готова к новым проектам и сотрудничеству! Вы можете оставить
+          заявку или связаться напрямую по контактам ниже.
         </p>
       </section>
 
-      <section class="personal-story">
-        <h2>Моя история</h2>
-        <p>
-          По образованию я биолог-эколог, но жизнь не стала связывать с наукой, а пошла работать 
-          после окончания университета в издательский дом, где я занималась организациями конференций и бизнес-встречами. 
-          В 2023 году я ушла в декрет и стала задумываться о смене профессии, и поняла что мне интересно программирование, 
-          а именно создание сайтов.
-        </p>
-        <p>
-          На данный момент осваиваю веб-разработку, на руках с грудным ребенком и это очень сложно. 
-          Увлекаюсь кулинарией, чтением книг и развитием своей маленькой семьи.
-        </p>
+      <section class="contact-info">
+        <div class="contact-item">
+          <h2>Почта</h2>
+          <p>
+            <a href="mailto:lidzhievaKh@yandex.ru">lidzhievaKh@yandex.ru</a>
+          </p>
+        </div>
       </section>
 
-      <section class="cat-section">
-        <h2>Моя семья</h2>
-        <p>
-          Мой верный спутник в жизни — это муж и с недавнего времени дочка. Они всегда
-          рядом, поддерживают мой любой выбор и новое увлечение. И
-          вдохновляют меня на новые идеи в кулинарии!
-        </p>
+      <section class="contact-form">
+        <h2>Оставить заявку на сотрудничество</h2>
+        <form
+          action="send_message.php"
+          method="POST"
+          id="contactForm"
+          target="_blank"
+        >
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Сообщение:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
 
-    <!-- Здесь будет подвал -->
     <footer>
       <p>© 2024. Все права защищены.</p>
     </footer>
-
-    <!-- Подключение JS -->
-    <script src="about.js"></script>
   </body>
 </html>
